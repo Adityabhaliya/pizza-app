@@ -57,7 +57,7 @@ function orderController () {
             const orders = await Order.find({ customerId: req.user._id },
                 null,
                 { sort: { 'createdAt': -1 } } )
-            res.header('Cache-Control', 'no-store')
+            res.header('Cache-Control', 'no-store')   //for use not repeat success or any maessage
             res.render('customers/orders', { orders: orders, moment: moment })
         },
         async show(req, res) {
