@@ -69,7 +69,7 @@ function updateStatus(order) {
             status.nextElementSibling.classList.add('current')
            }
        }
-    })
+    })   
 
 }
 
